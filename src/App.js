@@ -6,9 +6,12 @@ import MovieListHeading from "./components/MovieListHeading";
 import SearchBox from "./components/SearchBox";
 
 function App() {
+  // State that maintains the list of movies.
   const [movies, setMovies] = useState([]);
+  // State that maintain the input of user on the search bar.
   const [searchValue, setSearchValue] = useState("");
 
+  // Function that fetch the data from the api and sets it to the state Movies.
   const getMovieRequest = async () => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=213fa4ba`;
 
